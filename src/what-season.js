@@ -5,16 +5,8 @@ module.exports = function getSeason(date) {
     return "Unable to determine the time of year!";
   } else {
     function isValid(d) {
-      return (
-        Object.prototype.toString.call(d) === "[object Date]" &&
-        !isNaN 
-          );
+      return Object.prototype.toString.call(d) === "[object Date]" && !isNaN;
     }
-   if (date){
-     date(){
-       else 
-     }
-   }
     function check(d) {
       if (!isValid(d)) {
         throw new RangeError("invalid date");
