@@ -5,7 +5,14 @@ const MODERN_ACTIVITY = 15;
 const HALF_LIFE_PERIOD = 5730;
 
 module.exports = function dateSample(sampleActivity) {
-  if (sampleActivity !== /^[1-9]$/g) {
+  if (
+    +sampleActivity > 15 ||
+    +sampleActivity < 0 ||
+    sampleActivity === "Infinity" ||
+    +sampleActivity === Number.NEGATIVE_INFINITY ||
+    typeof sampleActivity !== "string" ||
+    isNaN(sampleActivity)
+  ) {
     return false;
   } else {
     const a = MODERN_ACTIVITY / +sampleActivity;
