@@ -18,7 +18,6 @@ module.exports = function getSeason(date) {
       if (e instanceof RangeError) {
       }
     }
-    console.log(date);
     switch (date.getMonth()) {
       case 11:
       case 0:
